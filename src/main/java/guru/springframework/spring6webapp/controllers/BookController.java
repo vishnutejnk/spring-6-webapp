@@ -15,10 +15,10 @@ public class BookController {
     }
 
     @RequestMapping("/books")
-    public String listBooks(Model model) {
+    public String getBooks(Model model) {
 
         model.addAttribute("books", bookService.findAll());
-        return "list-books";
+        return "books";
     }
 
 }
